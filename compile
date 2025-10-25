@@ -14,3 +14,5 @@
 # -ldl - used when programs load other shared libraries at runtime (like plugins or drivers)
 # -lX11 - links with X11, which is the window system used on linux: this library lets you create windows, handle keyboard and mouse events
 g++ -g -o raypong main.cpp -lraylib -lm -lpthread -ldl -lX11
+
+echo "run: ./raypong to run program"
