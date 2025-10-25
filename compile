@@ -1,2 +1,16 @@
 #!/usr/bin/env bash
-g++ -o raypong main.cpp -lraylib -lm -lpthread -ldl -lX11
+
+# Program:  compile
+# Function: compiles the program using GNU C++ compiler
+# GNU C++ or g++ takes your source file (one with .cpp extension) and turns them into an executable program (a file you can run/execute)
+# Flags: (flags are meant to alter or enhance the functioning of a program) 
+# -g tells g++ to include debugging information into the final executable program
+# this debug information is useful if you want to debug/inspect your program
+# -o what comes after this flag is the name of the executable (final compiled program in this case "raypong" is the name of the executable)
+# -lraylib tells g++ to link my program with raylib library: -l means link with a library(in this case -lraylib means link with raylib library)
+# -lm tells g++ compiler to link with math library: m stands for math which includes functions like sin(),cos(),tan(),sqrt() etc
+# -lpthread links with POSIX threads: this is useful if your program does multithreading (multithreading is running multiple taks at once)
+# even if your program is not using threads, the libraries you include might be using them under the hood
+# -ldl - used when programs load other shared libraries at runtime (like plugins or drivers)
+# -lX11 - links with X11, which is the window system used on linux: this library lets you create windows, handle keyboard and mouse events
+g++ -g -o raypong main.cpp -lraylib -lm -lpthread -ldl -lX11
